@@ -3,8 +3,10 @@ package lzc.com.example.mappingdemo.dao;
 import jakarta.persistence.EntityManager;
 import lzc.com.example.mappingdemo.entity.Instructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+@Repository
 public class AppDAOImpl implements AppDAO {
 
     // define fields for entity-manager

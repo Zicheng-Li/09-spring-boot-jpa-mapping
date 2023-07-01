@@ -23,12 +23,20 @@ public class MappingdemoApplication {
 	}
 
 	private void createInstructor(AppDAO appDAO) {
-		 // create Instructor
+		/*
+		//create Instructor
 		Instructor tempInstructor = new Instructor("Susan", "Public", "susan@rbc.com");
 
 		// create instructor detail
 
         InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.youtube.com", "Video Games");
+
+		 */
+
+		// create instructor detail
+		Instructor tempInstructor = new Instructor("HHHH", "lplplplp", "hhhh@rbc.com");
+
+		InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.youtube.com", "code");
 
 		// associate the objects
 		tempInstructor.setInstructorDetail(tempInstructorDetail);
