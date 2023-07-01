@@ -5,4 +5,6 @@ import lzc.com.example.mappingdemo.entity.Instructor;
 public interface AppDAO {
 
     void save(Instructor theInstructor);
+
+    Instructor findById(int theId);
 }
