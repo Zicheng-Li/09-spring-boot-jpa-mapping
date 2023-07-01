@@ -19,14 +19,22 @@ public class MappingdemoApplication {
 	public CommandLineRunner commandLineRunner(AppDAO appDAO) {
 		return runner -> {
 			// createInstructor(appDAO);
-			findInstructor(appDAO);
+			// findInstructor(appDAO);
+			deleteInstructor(appDAO);
 		};
+	}
+
+	private void deleteInstructor(AppDAO appDAO) {
+		int id=2;
+		System.out.println("delete with id " + id);
+		appDAO.deleteById(id);
+		System.out.println("Done!");
+
 	}
 
 	private void findInstructor(AppDAO appDAO) {
 		int id=2;
 		System.out.println("findInstructor with id " + id);
-
 		Instructor tempInstructor = appDAO.findById(id);
 		System.out.println("Instructor: " + tempInstructor);
 		System.out.println("InstructorDetail: " + tempInstructor.getInstructorDetail());

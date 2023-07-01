@@ -7,4 +7,6 @@ public interface AppDAO {
     void save(Instructor theInstructor);
 
     Instructor findById(int theId);
+
+    void deleteById(int theId);
 }
