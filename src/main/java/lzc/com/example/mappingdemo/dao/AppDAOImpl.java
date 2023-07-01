@@ -2,6 +2,7 @@ package lzc.com.example.mappingdemo.dao;
 
 import jakarta.persistence.EntityManager;
 import lzc.com.example.mappingdemo.entity.Instructor;
+import lzc.com.example.mappingdemo.entity.InstructorDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,6 +41,23 @@ public class AppDAOImpl implements AppDAO {
         if(tempinstructor != null) {
             entityManager.remove(tempinstructor);
         }
+    }
+
+    @Override
+    public InstructorDetail findInstructorDetailById(int theId) {
+        return entityManager.find(InstructorDetail.class ,theId);
+    }
+
+    @Override
+    @Transactional
+    public void deleteInstructorDetailById(int theId) {
+        // retrieve instructor by id
+        InstructorDetail tempinstructorDetail = entityManager.find(InstructorDetail.class ,theId);
+        // delete the instructor
+        if(tempinstructorDetail != null) {
+            entityManager.remove(tempinstructorDetail);
+        }
+
     }
 
 
