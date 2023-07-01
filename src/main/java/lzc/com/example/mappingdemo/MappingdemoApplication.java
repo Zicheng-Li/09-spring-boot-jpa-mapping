@@ -28,7 +28,7 @@ public class MappingdemoApplication {
 	}
 
 	private void deleteInstructorDetail(AppDAO appDAO) {
-		int id=3;
+		int id=4;
         System.out.println("delete with id " + id);
         appDAO.deleteInstructorDetailById(id);
         System.out.println("Done!");

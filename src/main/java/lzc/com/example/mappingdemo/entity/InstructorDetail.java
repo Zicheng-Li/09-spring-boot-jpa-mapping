@@ -29,7 +29,7 @@ public class InstructorDetail {
     @Column(name = "hobby")
     private String hobby;
 
-    @OneToOne(mappedBy = "instructorDetail", cascade= CascadeType.ALL) 
+    @OneToOne(mappedBy = "instructorDetail", cascade= {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     //mappedBy is used to specify the name of the field in the entity class that is the inverse of this relationship.
     private Instructor instructor;
 
